@@ -8,7 +8,7 @@
   <p><%= comm.user.username %> says: <%= comm.content %> </p>
 <% end %>
 
-<% @post.users.uniq.each do |user| %>
+<% @post.users.uniq.map do |user| %>
   <%= link_to user.username, user %>
 <% end %>
 
